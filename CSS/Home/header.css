@@ -1,0 +1,139 @@
+.header {
+  position: relative;
+}
+
+.leaf-1 {
+  z-index: 1;
+  position: absolute;
+  top: 44px;
+  right: -10px;
+  width: 100px;
+  height: 150px;
+  background: url("/Assets/svg/header/leaf-1.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  transform: rotate(-40deg);
+  transform-origin: right top;
+  opacity: 0;
+  animation: leaf-1-ani 500ms ease-in-out forwards;
+}
+
+@keyframes leaf-1-ani {
+  to {
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+.leaf-2 {
+  z-index: 1;
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  width: 80px;
+  height: 130px;
+  background: url("/Assets/svg/header/leaf-2.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  transform: rotate(40deg);
+  transform-origin: right bottom;
+  opacity: 0;
+  animation: leaf-2-ani 500ms ease-in-out forwards;
+}
+
+@keyframes leaf-2-ani {
+  to {
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+.leaf-3 {
+  z-index: 1;
+  position: absolute;
+  top: 45%;
+  left: calc(50% + 100px);
+  width: 40px;
+  height: 40px;
+  background: url("/Assets/svg/header/leaf-3.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  animation: leaf-3-ani 1s ease-in-out alternate-reverse;
+  animation-iteration-count: infinite;
+}
+
+@keyframes leaf-3-ani {
+  from {
+    transform: translateY(+2px);
+  }
+
+  to {
+    transform: translateX(-2px);
+  }
+}
+
+.fruit {
+  position: absolute;
+  top: 40%;
+  left: calc(50% - 100px);
+  width: 40px;
+  height: 40px;
+  background: url("/Assets/svg/header/fruit.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation: fruit-ani 1s ease-in-out alternate-reverse;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fruit-ani {
+  from {
+    transform: translateX(-2px);
+  }
+
+  to {
+    transform: translateX(+2px);
+  }
+}
+
+@media screen and (min-width: 630px) {
+  .leaf-3 {
+    left: calc(50% + 120px);
+  }
+
+  .fruit {
+    left: calc(50% - 120px);
+  }
+}
+
+@media screen and (min-width: 845px) {
+  .nav {
+    background-color: transparent !important;
+  }
+
+  .leaf-1 {
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 180px;
+  }
+
+  .leaf-2 {
+    width: 120px;
+    height: 170px;
+  }
+
+  .leaf-3 {
+    left: calc(50% + 150px);
+    width: 60px;
+    height: 60px;
+  }
+
+  .fruit {
+    left: calc(50% - 150px);
+    width: 60px;
+    height: 60px;
+  }
+}

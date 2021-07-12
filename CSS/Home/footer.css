@@ -1,0 +1,112 @@
+.footer {
+  padding: 80px 0;
+  background: #fa7001;
+}
+
+.socials {
+  width: 200px;
+  margin-right: 40px;
+  margin-bottom: 24px;
+}
+
+.socials > h4 {
+  margin-bottom: 8px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: 8px;
+  /* identical to box height */
+
+  /* Grey/white */
+
+  color: #ffffff;
+}
+
+.socials > h5 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+
+  /* Grey/Lighter */
+
+  color: #ebedf0;
+}
+
+.social-links {
+  height: 20px;
+  margin-bottom: 31px;
+}
+
+.social-links > a {
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.facebook {
+  background: url("../../../Assets/facebook.svg");
+}
+
+.twitter {
+  background: url("../../../Assets/twitter.svg");
+}
+
+.instagram {
+  background: url("../../../Assets/instagram.svg");
+}
+
+.pinterest {
+  background: url("../../../Assets/pinterest.svg");
+}
+
+.linkedin {
+  background: url("../../../Assets/linkedin.svg");
+}
+
+.footer .links {
+  width: 500px;
+}
+
+.links .links-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.links-item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.links-item > h3 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 16px;
+  /* identical to box height */
+
+  /* Grey/white */
+
+  color: #ffffff;
+}
+
+.links-item a {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height */
+
+  /* Grey/white */
+
+  color: #ffffff;
+}
+
+.links-item a:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}

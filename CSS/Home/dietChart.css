@@ -1,0 +1,111 @@
+.diet-chart {
+  position: relative;
+  background: url("../../../Assets/waves.png");
+  background-size: 550px;
+  background-position: bottom left;
+  background-repeat: repeat-x;
+}
+
+.diet-chart .img {
+  position: absolute;
+  height: 300px;
+  right: 0;
+  bottom: 0;
+  object-fit: contain;
+  object-position: bottom right;
+}
+.diet-chart .content {
+  padding-top: 48px;
+  padding-bottom: 320px;
+}
+
+.diet-chart .text {
+  max-width: 600px;
+}
+
+.diet-chart .text h1 {
+  max-width: 400px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  letter-spacing: -0.01em;
+  color: var(--color-7);
+  margin-bottom: 32px;
+}
+
+.diet-chart .text p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  color: var(--color-1);
+  margin-bottom: 32px;
+}
+
+.diet-chart .text button {
+  padding: 4px 12px !important;
+  font-size: 13px !important;
+}
+
+@media screen and (min-width: 390px) {
+  .diet-chart .text button {
+    padding: 8px 16px !important;
+    font-size: 16px !important;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .diet-chart {
+    background-size: contain;
+  }
+
+  .diet-chart .img {
+    height: 350px;
+  }
+
+  .diet-chart .text p {
+    max-width: 400px;
+  }
+  .diet-chart .text button {
+    font-size: 16px;
+    padding: 4px 16px;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .diet-chart .content {
+    padding-bottom: 200px;
+  }
+}
+
+@media screen and (min-width: 845px) {
+  .diet-chart .img {
+    height: 480px;
+  }
+
+  .diet-chart .text h1 {
+    font-size: 56px;
+  }
+
+  .diet-chart .text p {
+    max-width: 500px;
+    font-size: 20px;
+    color: var(--color-5);
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  .diet-chart {
+    background-size: 1000px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .diet-chart .content {
+    padding: 184px 0;
+  }
+
+  .diet-chart .img {
+    height: calc(100% - 200px);
+  }
+}

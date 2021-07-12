@@ -1,0 +1,50 @@
+.why-me {
+  padding-bottom: 50px;
+}
+.why-me .img-title {
+  width: 100%;
+  max-width: 955px;
+  margin-bottom: 5px;
+}
+
+.why-me .text {
+  width: 100%;
+  max-width: 966px;
+}
+
+.why-me .text img {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.why-me .text h1 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: -0.01em;
+  color: var(--color-9);
+  margin-bottom: 16px;
+}
+
+.why-me .text p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  color: var(--color-9);
+  opacity: 0.5;
+  margin-bottom: 48px;
+}
+
+@media screen and (min-width: 845px) {
+  .why-me {
+    padding-bottom: 80px;
+  }
+  .why-me .text h1 {
+    font-size: 56px;
+  }
+
+  .why-me .text p {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,111 @@
+.about-me {
+  overflow: auto;
+  overflow-y: hidden;
+}
+
+/* title */
+.about-me .title {
+  margin-top: 16px;
+  padding-right: 10px;
+  max-width: 997px;
+}
+
+.about-me .title .img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* content */
+.about-me .content {
+  margin-bottom: 56px;
+}
+
+/* person img */
+.about-me .content .img-container {
+  width: 100%;
+  max-width: 280px;
+  max-height: 400px;
+  margin-bottom: 40px;
+}
+
+.about-me .content .img-container .img {
+  width: 100%;
+  object-fit: cover;
+  transform: scale(0.7);
+  opacity: 0;
+  transition: all 400ms ease-in-out;
+}
+
+.about-me.appear .content .img-container .img {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* text */
+.about-me .text {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 400ms ease-in-out;
+}
+
+.about-me.appear .text {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.about-me .text h1 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  letter-spacing: -0.01em;
+  color: var(--color-7);
+  margin-bottom: 16px;
+}
+
+.about-me .text p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: -0.01em;
+  color: var(--color-6);
+  margin-bottom: 32px;
+}
+
+@media screen and (min-width: 630px) {
+  .about-me .content {
+    display: flex;
+    max-width: 650px;
+  }
+
+  .about-me .img-container {
+    flex: none;
+    margin-right: 16px;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .about-me .img-container {
+    margin-right: 24px;
+  }
+}
+
+@media screen and (min-width: 845px) {
+  .about-me .content {
+    max-width: 820px !important;
+  }
+
+  .about-me .img-container {
+    max-width: 405px !important;
+    max-height: 586px !important;
+    margin-right: 40px;
+  }
+
+  .about-me .text h1 {
+    font-size: 3.5rem;
+  }
+
+  .about-me .text p {
+    font-size: 1.25rem;
+  }
+}

@@ -1,0 +1,135 @@
+.testimonial {
+  width: 100%;
+  padding: 50px 0;
+  position: relative;
+  overflow: hidden;
+  background: url("/Assets/Review.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+.testimonial h1 {
+  max-width: 300px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  letter-spacing: -0.01em;
+  color: var(--color-1);
+}
+
+.btn-prev,
+.btn-next {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.test-cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 310px);
+  overflow: scroll;
+  scroll-behavior: smooth;
+  padding-left: 20px;
+}
+
+.test-cards::-webkit-scrollbar {
+  width: 0;
+}
+
+.test-card {
+  padding-right: 24px;
+}
+
+.test-card > div {
+  display: block;
+  padding: 32px;
+  width: 100%;
+  height: 232px;
+  background: #ffffff;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+}
+
+.test-card p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: #6d747a;
+  opacity: 0.7;
+  margin-bottom: 32px;
+}
+
+.test-card .author .img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.test-card .author .info > h5 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: -0.01em;
+  color: #08090a;
+}
+
+.test-card .author .info > h6 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: -0.01em;
+  color: #939ca3;
+}
+
+@media screen and (min-width: 630px) {
+  .testimonial h1 {
+    font-size: 42px;
+    max-width: 370px;
+  }
+}
+
+@media screen and (min-width: 845px) {
+  .testimonial {
+    padding: 100px 0;
+  }
+
+  .testimonial h1 {
+    max-width: 500px;
+    font-size: 56px;
+  }
+
+  .test-cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 450px);
+    overflow: scroll;
+    scroll-behavior: smooth;
+    padding-left: 20px;
+  }
+
+  .test-card p {
+    font-size: 16px;
+  }
+
+  .test-card .author .img {
+    width: 64px;
+    height: 64px;
+    margin-right: 16px;
+  }
+
+  .test-card .author .info > h5 {
+    font-size: 16px;
+  }
+
+  .test-card .author .info > h6 {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 930px) {
+  .testimonial {
+    background-size: 900px;
+  }
+}

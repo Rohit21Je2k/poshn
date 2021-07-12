@@ -1,0 +1,28 @@
+/* background colors */
+.bg-color-1 {
+  background-color: var(--color-1) !important;
+}
+
+.bg-color-3 {
+  background-color: var(--color-3) !important;
+}
+
+.bg-color-4 {
+  background-color: var(--color-4) !important;
+}
+
+.bg-color-5 {
+  background-color: var(--color-5) !important;
+}
+
+.bg-color-6 {
+  background-color: var(--color-6) !important;
+}
+
+.bg-color-7 {
+  background-color: var(--color-7) !important;
+}
+
+.bg-color-9 {
+  background-color: var(--color-9) !important;
+}

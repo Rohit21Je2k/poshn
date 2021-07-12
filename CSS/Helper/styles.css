@@ -1,0 +1,339 @@
+/****************************** icons ***************************************/
+.icon-person {
+  background: url("./icon.svg");
+}
+
+/****************************** box sizing **********************************/
+.box-border {
+  box-sizing: border-box;
+}
+
+.box-content {
+  box-sizing: content-box;
+}
+
+/***************************** box shadow **********************************/
+.shadow-sm {
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px;
+}
+
+.shadow-md {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.shadow-lg {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+
+/****************************** display ************************************/
+.none {
+  display: none !important;
+}
+
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.flex {
+  display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+/****************************** flex styles **********************************/
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-jc-sb {
+  justify-content: space-between;
+}
+
+.flex-jc-c {
+  justify-content: center;
+}
+
+.flex-ai-c {
+  align-items: center;
+}
+
+.flex-as-start {
+  align-self: flex-start;
+}
+
+.flex-as-end {
+  align-self: flex-end;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+/****************************** position ************************************/
+.pos-rel {
+  position: relative;
+}
+
+.pos-abs {
+  position: absolute;
+}
+
+.pos-fixed {
+  position: fixed;
+}
+
+.pos-sticky {
+  position: sticky;
+}
+
+/******************************* width/height  **********************************/
+.w-auto {
+  width: auto;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-100vw {
+  width: 100vw;
+}
+
+.h-auto {
+  height: auto;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.h-100vh {
+  height: 100vh;
+}
+
+/****************************** margin *************************************/
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+/****************************** overflow ***********************************/
+.overflow-auto {
+  overflow: auto;
+}
+
+.overflow-scroll {
+  overflow: scroll;
+}
+
+.overflow-visible {
+  overflow: visible;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+/****************************** visibility ***********************************/
+.visibility-0 {
+  visibility: hidden;
+}
+
+.visibility-1 {
+  visibility: visible;
+}
+
+/********************************** float ************************************/
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+/************************** background Styles ******************************/
+.bg-none {
+  background: none;
+}
+
+.bg-transparent {
+  background: transparent;
+}
+
+/* background attachment */
+.bg-fixed {
+  background-attachment: fixed;
+}
+
+.bg-local {
+  background-attachment: local;
+}
+
+.bg-scroll {
+  background-attachment: scroll;
+}
+
+/* background clip */
+.bg-clip-border {
+  background-clip: border-box;
+}
+
+.bg-clip-content {
+  background-clip: content-box;
+}
+
+.bg-clip-padding {
+  background-clip: padding-box;
+}
+
+.bg-clip-text {
+  background-clip: text;
+}
+
+/* background position */
+.bg-x-l {
+  background-position-x: left;
+}
+
+.bg-x-c {
+  background-position-x: center;
+}
+
+.bg-x-r {
+  background-position-x: right;
+}
+
+.bg-y-t {
+  background-position-y: top;
+}
+
+.bg-y-c {
+  background-position-y: center;
+}
+
+.bg-y-b {
+  background-position-y: bottom;
+}
+
+/* background repeat */
+.bg-repeat {
+  background-repeat: repeat;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+
+.bg-repeat-x {
+  background-repeat: repeat-x;
+}
+
+.bg-repeat-y {
+  background-repeat: repeat-y;
+}
+
+/* background Size */
+.bg-auto {
+  background-size: auto;
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-contain {
+  background-size: contain;
+}
+
+/***************************** border styles ********************************/
+
+/* border radius */
+.round-sm {
+  border-radius: 2px;
+}
+
+.round-md {
+  border-radius: 5px;
+}
+
+.round-lg {
+  border-radius: 10px;
+}
+
+/******************************** font styles ******************************?
+
+/* font weight */
+.wgt-300 {
+  font-weight: 300;
+}
+
+.wgt-400 {
+  font-weight: 400;
+}
+
+.wgt-500 {
+  font-weight: 500;
+}
+
+.wgt-700 {
+  font-weight: 700;
+}
+
+/* font size */
+.fnt-12 {
+  font-size: 12px;
+}
+
+.fnt-14 {
+  font-size: 14px;
+}
+
+.fnt-16 {
+  font-size: 16px;
+}
+
+.fnt-18 {
+  font-size: 18px;
+}
+
+.fnt-20 {
+  font-size: 20px;
+}
+
+.fnt-24 {
+  font-size: 24px;
+}
+
+/*********************************** Text styles *******************************/
+
+/* text align */
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
