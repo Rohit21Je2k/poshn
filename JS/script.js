@@ -4,22 +4,22 @@ handleHamburgerBtn();
 renderContactUs();
 handleBookingFormSubmit();
 
-function addSnapToDiv(width) {
-  const hasSnap = document.querySelectorAll(".has-snap");
-  if (width >= 1000) {
-    hasSnap.forEach((div) => {
-      if (!div.classList.contains("snap-div")) {
-        div.classList.add("snap-div");
-      }
-    });
-    return;
-  }
-  hasSnap.forEach((div) => {
-    if (div.classList.contains("snap-div")) {
-      div.classList.remove("snap-div");
-    }
-  });
-}
+// function addSnapToDiv(width) {
+//   const hasSnap = document.querySelectorAll(".has-snap");
+//   if (width >= 1000) {
+//     hasSnap.forEach((div) => {
+//       if (!div.classList.contains("snap-div")) {
+//         div.classList.add("snap-div");
+//       }
+//     });
+//     return;
+//   }
+//   hasSnap.forEach((div) => {
+//     if (div.classList.contains("snap-div")) {
+//       div.classList.remove("snap-div");
+//     }
+//   });
+// }
 
 function handleHamburgerBtn() {
   const btn = document.querySelector(".nav-hamburger");
@@ -69,21 +69,30 @@ function renderContactUs() {
 
 function handleBookingFormSubmit() {
   const form = document.querySelector(".booking-overlay .form");
-  form.onsubmit = (e) => {
-    e.preventDefault();
-    const name = e.target.name.value;
-    const email = e.target.email.value;
-    const phone = e.target.phone.value;
-    const message = e.target.message.value;
-    const consultationType = e.target.consultationType.value;
-    console.log(e.target.consultationType);
-    console.log(consultationType);
-    console.log({
-      name,
-      email,
-      phone,
-      message,
-      consultationType,
-    });
-  };
+  if (form) {
+    form.onsubmit = (e) => {
+      e.preventDefault();
+      const name = e.target.name.value;
+      const email = e.target.email.value;
+      const phone = e.target.phone.value;
+      const message = e.target.message.value;
+      const consultationType = [];
+
+      for (let i = 0; i < 4; i++) {
+        const node = e.target.consultationType[i];
+
+        if (node.checked === true) {
+          consultationType.push(node.value);
+        }
+      }
+
+      console.log({
+        name,
+        email,
+        phone,
+        message,
+        consultationType,
+      });
+    };
+  }
 }

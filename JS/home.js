@@ -1,43 +1,47 @@
 const snapDiv = document.querySelector(".snap-container");
 const aboutSection = document.querySelector(".about-me");
 
-// snapDiv.onscroll = () => {
-//   // snapDiv.scrollTo({
-//   //   top: 700,
-//   //   behavior: "smooth",
-//   // });
-//   // aboutSection.scrollIntoView();
-//   const aboutTop = aboutSection.getBoundingClientRect().top;
+snapDiv.onscroll = throttle(aos, 100);
 
-//   if (aboutTop < 20) {
-//     setTimeout(() => {
-//       aboutSection.classList.add("appear");
-//     }, 0);
-//   }
-// };
+function aos() {
+  console.log("hi");
+  const aboutTop = aboutSection.getBoundingClientRect().top;
+  if (aboutTop < window.innerHeight / 2) {
+    document
+      .querySelector(".about-me .content .img-container .img")
+      .classList.add("appear");
+    document.querySelector(".about-me .text").classList.add("appear");
+    return false;
+  }
+  return true;
+}
 
-const options = { threshold: 0.6 };
-
-const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      setTimeout(() => {
-        entry.target.classList.add("appear");
-      }, 0);
-      return;
-    }
-  });
-}, options);
-
-observer.observe(aboutSection);
-
-// const mutObserver = new MutationObserver((mutations) => {
-//   console.log(mutations);
-//   mutations.forEach((mutation) => {
-//     console.log(mutation);
+// const observer = new IntersectionObserver((entries) => {
+//   entries.forEach((entry) => {
+//     if (entry.isIntersecting) {
+//       document
+//         .querySelector(".about-me .content .img-container .img")
+//         .classList.add("appear");
+//       document.querySelector(".about-me .text").classList.add("appear");
+//     }
 //   });
 // });
 
-// mutObserver.observe(aboutSection, {
-//   attributes: true,
+// observer.observe(aboutSection, {
+//   threshold: 0.6,
 // });
+
+function throttle(func, wait) {
+  let flag = true;
+  return function () {
+    if (flag) {
+      const r = func();
+      flag = false;
+      if (r) {
+        setTimeout(() => {
+          flag = true;
+        }, wait);
+      }
+    }
+  };
+}

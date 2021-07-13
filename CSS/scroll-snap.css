@@ -1,15 +1,5 @@
 .snap-container {
   width: 100%;
   height: 100vh;
-  scroll-snap-type: y mandatory;
   overflow-y: scroll;
-  scroll-behavior: smooth;
-}
-
-.snap-container:focus-within {
-  scroll-behavior: smooth;
-}
-
-.snap-div {
-  scroll-snap-align: start;
 }
