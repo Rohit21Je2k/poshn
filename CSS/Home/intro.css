@@ -1,5 +1,6 @@
 .intro-section {
   position: relative;
+  overflow: hidden;
 }
 
 /* wrapper */

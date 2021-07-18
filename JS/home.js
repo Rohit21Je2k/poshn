@@ -1,22 +1,30 @@
-const aniNodes = document.querySelectorAll(".has-ani");
+home();
 
-const Observer = new IntersectionObserver(
-  (entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("ani");
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  {
-    threshold: 0.3,
-  }
-);
+function home() {
+  aosIntersection();
+}
 
-aniNodes.forEach((node) => {
-  Observer.observe(node);
-});
+function aosIntersection() {
+  const aniNodes = document.querySelectorAll(".has-ani");
+
+  const Observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("ani");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.3,
+    }
+  );
+
+  aniNodes.forEach((node) => {
+    Observer.observe(node);
+  });
+}
 
 // aos();
 

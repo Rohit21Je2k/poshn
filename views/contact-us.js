@@ -1,6 +1,5 @@
 export default function contactUsHTML() {
-  return `<section class="booking-overlay">
-        <div class="overlay"></div>
+  return `<div class="overlay"></div>
         <div class="scroll">
           <div class="content">
             <div>
@@ -32,11 +31,12 @@ export default function contactUsHTML() {
                       <div class="input flex flex-ai-c">
                         <div class="icon icon-mail icon-grey mr-10px"></div>
                         <input
-                        name="email"
+                         name="email"
                           class="input-field"
                           type="text"
                           placeholder="Enter email"
                           value=""
+                          required
                         />
                       </div>
                     </div>
@@ -134,5 +134,5 @@ export default function contactUsHTML() {
             </div>
           </div>
         </div>
-      </section>`;
+     `;
 }

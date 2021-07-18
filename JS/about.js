@@ -1,7 +1,11 @@
-window.onload = setTestCards;
+about();
 window.onresize = setTestCards;
 
-testimonialScroll();
+function about() {
+  setTestCards();
+  testimonialScroll();
+  aosIntersection();
+}
 
 function setTestCards() {
   const div = document.querySelector(".testimonial .wrapper");
@@ -25,4 +29,26 @@ function testimonialScroll() {
   next.onclick = () => {
     cards.scrollLeft += scrollAmount;
   };
+}
+
+function aosIntersection() {
+  const aniNodes = document.querySelectorAll(".has-ani");
+
+  const Observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("ani");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.3,
+    }
+  );
+
+  aniNodes.forEach((node) => {
+    Observer.observe(node);
+  });
 }
