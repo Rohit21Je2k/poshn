@@ -1,43 +1,39 @@
 import contactUsHTML from "/views/contact-us.js";
+
 // addSnapToDiv(screen.width);
 handleHamburgerBtn();
-renderContactUs();
-handleBookingFormSubmit();
+// renderContactUs();
+// handleBookingFormSubmit();
 
-// function addSnapToDiv(width) {
-//   const hasSnap = document.querySelectorAll(".has-snap");
-//   if (width >= 1000) {
-//     hasSnap.forEach((div) => {
-//       if (!div.classList.contains("snap-div")) {
-//         div.classList.add("snap-div");
-//       }
-//     });
-//     return;
-//   }
-//   hasSnap.forEach((div) => {
-//     if (div.classList.contains("snap-div")) {
-//       div.classList.remove("snap-div");
-//     }
-//   });
-// }
+function addSnapToDiv(width) {
+  const hasSnap = document.querySelectorAll(".has-snap");
+  if (width >= 700) {
+    hasSnap.forEach((div) => {
+      if (!div.classList.contains("snap-div")) {
+        div.classList.add("snap-div");
+      }
+    });
+    return;
+  }
+  hasSnap.forEach((div) => {
+    if (div.classList.contains("snap-div")) {
+      div.classList.remove("snap-div");
+    }
+  });
+}
 
 function handleHamburgerBtn() {
-  const btn = document.querySelector(".nav-hamburger");
+  const btn = document.querySelector(".nav .hamburger");
   if (btn) {
     btn.onclick = () => {
       const body = document.querySelector("body");
-      const overlay = document.querySelector(".header .nav-overlay");
-      const menuMob = document.querySelector(".nav-menu-mob");
-      if (btn.classList.contains("open")) {
-        btn.classList.remove("open");
+      const nav = document.querySelector(".nav");
+      if (nav.classList.contains("open")) {
         body.classList.remove("overflow-hidden");
-        overlay.classList.add("none");
-        menuMob.classList.remove("open");
+        nav.classList.remove("open");
       } else {
-        btn.classList.add("open");
         body.classList.add("overflow-hidden");
-        overlay.classList.remove("none");
-        menuMob.classList.add("open");
+        nav.classList.add("open");
       }
     };
   }

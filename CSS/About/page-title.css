@@ -27,6 +27,7 @@
 
 .page-title.about {
   background: url("/Assets/About.png");
+  background-color: var(--color-7);
 }
 
 @media screen and (min-width: 450px) {

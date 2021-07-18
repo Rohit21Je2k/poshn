@@ -7,11 +7,3 @@
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
-
-.shadow-1 {
-  box-shadow: 0px 2px 34px 5px rgba(255, 42, 106, 0.07);
-}
-
-.border-1 {
-  border: 8px solid white;
-}

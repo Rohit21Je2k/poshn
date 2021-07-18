@@ -1,24 +1,17 @@
 .consultation {
   position: relative;
   height: 620px;
-}
-
-.consultation .bg-img {
-  width: 100%;
-  height: 100%;
-  background: url("../../../Assets/fruits-outline.png");
+  background-image: url("/Assets/fruits-outline.png");
   background-position: center center;
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 
 .consultation .text {
-  position: absolute;
-  width: 320px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 400px;
   text-align: center;
+  margin: 0 auto;
 }
 
 .consultation .text h1 {
@@ -33,20 +26,42 @@
   border-radius: 8px;
 }
 
-@media screen and (min-width: 845px) {
+/* animation */
+.consultation .text h1,
+.consultation .text button {
+  transition-property: opacity, transform;
+  transition-timing-function: ease;
+  transition-duration: 700ms;
+}
+
+.consultation .text h1 {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.consultation .text button {
+  transform: translate(0, 100px);
+}
+
+.consultation.ani .text h1 {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.consultation.ani .text button {
+  transform: translate(0, 0);
+}
+
+@media screen and (min-width: 700px) {
   .consultation {
     height: 800px;
-    margin-top: 0;
+    background-image: url("/Assets/fruits-outline-2.png");
   }
-  .consultation .bg-img {
-    background: url("../../../Assets/fruits-outline-2.png");
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
+}
 
+@media screen and (min-width: 845px) {
   .consultation .text {
-    width: 700px;
+    max-width: 700px;
   }
 
   .consultation .text h1 {

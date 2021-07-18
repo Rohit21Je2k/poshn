@@ -4,7 +4,12 @@
   border-radius: 20px;
   font-weight: 500;
   font-size: 16px;
-  transition: all 200ms ease-in-out;
+}
+
+.btn:hover {
+  transition-property: color, opacity, background-color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 200ms;
 }
 
 .btn-dark {

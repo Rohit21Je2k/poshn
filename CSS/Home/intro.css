@@ -1,28 +1,18 @@
-.intro {
+.intro-section {
   position: relative;
-  overflow-x: hidden;
 }
 
-.intro .content {
+/* wrapper */
+.intro-section .wrapper {
   padding-top: 40px;
 }
 
-.intro .text {
-  position: relative;
-  animation: introTextAni 500ms ease-in-out forwards;
-  opacity: 0;
-  transform: translateX(-50px);
-}
-
-@keyframes introTextAni {
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
 /* intro text */
-.intro .text h1 {
+.intro-section .text {
+  position: relative;
+}
+
+.intro-section .text h1 {
   width: 100%;
   max-width: 235px;
   font-style: normal;
@@ -33,98 +23,107 @@
   margin-bottom: 24px;
 }
 
-.intro .text p {
+.intro-section .text p {
   width: 100%;
   max-width: 320px;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: -0.01em;
-  color: var(--color-1);
+  color: var(--color-6);
   margin-bottom: 40px;
 }
 
-.intro .text button {
+.intro-section .text button {
   margin-bottom: 40px;
 }
 
 /* intro img */
-.intro .img-container {
-  line-height: 0;
+.intro-section .img-container {
   position: relative;
+  line-height: 0;
   text-align: center;
-  transform: translateX(+50px);
-  opacity: 0;
-  animation: imgContAni 500ms ease-in-out forwards;
-}
-
-@keyframes imgContAni {
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-.intro .img-container .img {
   height: 400px;
+}
+
+.intro-section .img-container .img {
+  width: 100%;
+  height: 100%;
   object-fit: contain;
-  object-position: bottom;
+  object-position: center bottom;
+}
+
+/* animation */
+.intro-section .text {
+  opacity: 0;
+  transform: translate(-100px, 0);
+  animation: header-ani-end 400ms ease-in-out forwards;
+  animation-delay: 400ms;
+}
+
+.intro-section .img-container {
+  opacity: 0;
+  transform: translate(100px, 0);
+  animation: header-ani-end 400ms ease-in-out forwards;
+  animation-delay: 300ms;
 }
 
 @media screen and (min-width: 630px) {
-  .intro .content {
-    padding-top: 0;
+  .intro-section .wrapper {
     display: flex;
-    justify-content: center;
+    max-width: 690px;
+    padding-top: 20px;
   }
-  .intro .text,
-  .intro .img-container {
+
+  .intro-section .text,
+  .intro-section .img-container {
     flex: 100%;
   }
+}
 
-  .intro .text {
-    display: flex;
-    justify-content: center;
+@media screen and (min-width: 700px) {
+  .intro-section .wrapper {
+    padding-top: 0;
   }
 
-  .intro .img-container .img {
-    height: 500px;
+  .intro-section .img-container {
+    height: 450px;
   }
 }
 
 @media screen and (min-width: 845px) {
-  .intro .content {
-    padding-top: 0;
+  .intro-section .wrapper {
+    max-width: 1200px;
   }
 
-  .intro .text h1 {
+  .intro-section .text h1 {
     max-width: 455px;
     font-size: 52px;
   }
 
-  .intro .text p {
+  .intro-section .text p {
     max-width: 380px;
     font-size: 20px;
     color: var(--color-6);
   }
 
-  .intro .img-container {
+  .intro-section .img-container {
     padding-top: 20px;
   }
 
-  .intro .img-container .img {
+  .intro-section .img-container {
     height: 600px;
   }
 }
 
 @media screen and (min-width: 900px) {
-  .intro .text h1 {
+  .intro-section .text h1 {
     font-size: 56px;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .intro .img-container .img {
+  .intro-section .img-container {
     height: 700px;
   }
 }

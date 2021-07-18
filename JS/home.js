@@ -1,47 +1,50 @@
-const snapDiv = document.querySelector(".snap-container");
-const aboutSection = document.querySelector(".about-me");
+const aniNodes = document.querySelectorAll(".has-ani");
 
-snapDiv.onscroll = throttle(aos, 100);
+const Observer = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("ani");
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.3,
+  }
+);
+
+aniNodes.forEach((node) => {
+  Observer.observe(node);
+});
+
+// aos();
 
 function aos() {
-  console.log("hi");
-  const aboutTop = aboutSection.getBoundingClientRect().top;
-  if (aboutTop < window.innerHeight / 2) {
-    document
-      .querySelector(".about-me .content .img-container .img")
-      .classList.add("appear");
-    document.querySelector(".about-me .text").classList.add("appear");
-    return false;
-  }
-  return true;
+  const snapDiv = document.querySelector(".snap-container");
+  snapDiv.onscroll = throttle(addClass, 100);
 }
 
-// const observer = new IntersectionObserver((entries) => {
-//   entries.forEach((entry) => {
-//     if (entry.isIntersecting) {
-//       document
-//         .querySelector(".about-me .content .img-container .img")
-//         .classList.add("appear");
-//       document.querySelector(".about-me .text").classList.add("appear");
-//     }
-//   });
-// });
-
-// observer.observe(aboutSection, {
-//   threshold: 0.6,
-// });
+function addClass() {
+  const snapDiv = document.querySelector(".snap-container");
+  const nodes = document.querySelectorAll(".has-ani");
+  nodes.forEach((node) => {
+    const top = node.offsetTop - snapDiv.scrollTop;
+    if (top < 200) {
+      node.classList.add("ani");
+    }
+  });
+}
 
 function throttle(func, wait) {
   let flag = true;
   return function () {
     if (flag) {
-      const r = func();
+      func();
       flag = false;
-      if (r) {
-        setTimeout(() => {
-          flag = true;
-        }, wait);
-      }
+      setTimeout(() => {
+        flag = true;
+      }, wait);
     }
   };
 }
