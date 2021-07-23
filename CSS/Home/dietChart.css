@@ -9,6 +9,15 @@
   padding-top: 50px;
 }
 
+/* leaf */
+.diet-chart .leaf {
+  position: absolute;
+  width: 50px;
+  height: 70px;
+  top: 10px;
+  left: 0;
+}
+
 /* img  */
 .diet-chart .img {
   position: absolute;
@@ -76,6 +85,11 @@
     height: 840px;
   }
 
+  .diet-chart .leaf {
+    width: 70px;
+    height: 90px;
+  }
+
   .diet-chart .img {
     height: 350px;
   }
@@ -111,6 +125,12 @@
 @media screen and (min-width: 1050px) {
   .diet-chart {
     padding-top: 100px;
+  }
+
+  .diet-chart .leaf {
+    top: 40px;
+    width: 100px;
+    height: 120px;
   }
 
   .diet-chart .img {

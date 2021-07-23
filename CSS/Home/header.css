@@ -5,11 +5,11 @@
 .leaf-1 {
   z-index: 1;
   position: absolute;
-  top: 44px;
+  top: -15px;
   right: -10px;
   width: 100px;
   height: 150px;
-  background: url("/Assets/svg/header/leaf-1.svg");
+  background-image: url("/Assets/svg/header/leaf-1.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right;
@@ -99,6 +99,10 @@
 }
 
 @media screen and (min-width: 630px) {
+  .leaf-1 {
+    top: -20px;
+  }
+
   .leaf-3 {
     left: calc(50% + 120px);
   }
@@ -110,7 +114,7 @@
 
 @media screen and (min-width: 870px) {
   .leaf-1 {
-    top: 0;
+    top: -74px;
     right: 0;
     width: 150px;
     height: 180px;
