@@ -132,4 +132,9 @@
   .testimonial {
     background-size: 900px;
   }
+
+  .testimonial h1 {
+    max-width: 550px;
+    font-size: 64px;
+  }
 }

@@ -71,11 +71,13 @@ function handleOpenBookingForm() {
 }
 
 function handleCloseBookingForm() {
-  const closeBtn = document.querySelector(".booking-overlay .btn-close");
-  closeBtn.onclick = () => {
-    document.querySelector("body").classList.remove("overflow-hidden");
-    document.querySelector(".booking-overlay").classList.add("none");
-  };
+  const closeBtns = document.querySelectorAll(".booking-overlay .btn-close");
+  closeBtns.forEach((btn) => {
+    btn.onclick = () => {
+      document.querySelector("body").classList.remove("overflow-hidden");
+      document.querySelector(".booking-overlay").classList.add("none");
+    };
+  });
 }
 
 function handleBookingFormInput() {

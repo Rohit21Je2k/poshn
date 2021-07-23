@@ -23,7 +23,7 @@
 }
 
 .booking-overlay .scroll {
-  padding: 50px 0;
+  padding: 0;
   position: relative;
   z-index: 18;
   width: 100%;
@@ -31,29 +31,46 @@
 
 .booking-overlay .content {
   width: 100%;
-  max-width: 774px;
+  height: 100%;
   text-align: right;
   margin: 0 auto;
 }
 
-.btn-close {
+.booking-overlay .btn-container {
+  text-align: right;
+}
+
+.booking-overlay .btn-close {
   width: 30px;
   height: 30px;
   border-radius: 100%;
-  background: url("https://image.flaticon.com/icons/png/512/1828/1828778.png");
+  background-image: url("https://image.flaticon.com/icons/png/512/1828/1828778.png");
   background-color: #eee;
   background-size: 15px;
   background-repeat: no-repeat;
   background-position: center center;
   margin-right: 5px;
+  display: none;
 }
 
 .booking {
   position: relative;
   background: #ffffff;
-  border-radius: 16px;
-  margin: 10px auto;
-  padding: 48px 20px;
+  margin: 0;
+  padding: 20px;
+}
+.booking .btn-container {
+  text-align: left;
+}
+
+.booking .btn-close {
+  width: 24px;
+  height: 24px;
+  background-image: url("/Assets/svg/arrow-left.svg");
+  background-color: white;
+  background-size: 100%;
+  border-radius: 0;
+  display: inline-block;
 }
 
 .booking .title {
@@ -215,19 +232,14 @@ input:-internal-autofill-selected {
   margin-right: 12px;
   margin-bottom: 20px;
   background: #f8f9fa;
-  /* Grey/Light */
 
   border: 2px solid #ced4da;
   border-radius: 8px;
-  /* identical to box height */
 
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
-  /* identical to box height */
-
-  /* Grey/Darkest */
 
   color: #08090a;
 }
@@ -280,6 +292,27 @@ input:-internal-autofill-selected {
 }
 
 @media screen and (min-width: 600px) {
+  .booking-overlay .scroll {
+    padding: 50px 0;
+  }
+
+  .booking-overlay .content {
+    max-width: 774px;
+  }
+
+  .booking {
+    border-radius: 16px;
+    margin: 10px auto;
+    padding: 48px 20px;
+  }
+
+  .booking-overlay .btn-close {
+    display: inline-block;
+  }
+  .booking .btn-close {
+    display: none;
+  }
+
   .booking .title h2 {
     font-size: 50px;
   }

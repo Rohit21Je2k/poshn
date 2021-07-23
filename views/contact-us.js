@@ -2,10 +2,13 @@ export default function contactUsHTML() {
   return `<div class="overlay"></div>
         <div class="scroll">
           <div class="content">
-            <div>
+            <div class="btn-container">
               <button class="btn-close"></button>
             </div>
             <div class="booking">
+            <div class="btn-container">
+            <button class="btn-close"></button>
+            </div>
               <div class="title">
                 <h2>Get in touch!</h2>
                 <h5>Get advice related to the service</h5>
