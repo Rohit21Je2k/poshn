@@ -4,6 +4,7 @@ main();
 
 function main() {
   // addSnapToDiv(screen.width);
+  aosIntersection();
   handleHamburgerBtn();
   handleContactUs();
 }
@@ -131,4 +132,26 @@ function handleBookingFormSubmit() {
       form.reset();
     };
   }
+}
+
+function aosIntersection() {
+  const aniNodes = document.querySelectorAll(".has-ani");
+
+  const Observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("ani");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.3,
+    }
+  );
+
+  aniNodes.forEach((node) => {
+    Observer.observe(node);
+  });
 }

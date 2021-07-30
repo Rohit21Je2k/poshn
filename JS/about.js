@@ -1,19 +1,18 @@
 about();
-window.onresize = setTestCards;
+
+window.onresize = setTestCardsMargin;
 
 function about() {
-  setTestCards();
+  setTestCardsMargin();
   testimonialScroll();
-  aosIntersection();
 }
 
-function setTestCards() {
-  const div = document.querySelector(".testimonial .wrapper");
-  if (div) {
-    const left = div.offsetLeft < 20 ? 20 : div.offsetLeft;
-    const testCards = document.querySelector(".test-cards");
-    testCards.style.paddingLeft = left + "px";
-  }
+function setTestCardsMargin() {
+  const textCards = document.querySelector(".test-cards");
+  const wrapper = document.querySelector(".testimonial .wrapper");
+  const marginLeft = wrapper.offsetLeft + 20; // 20 is wrapper padding
+  console.log(marginLeft);
+  textCards.style.marginLeft = marginLeft + "px";
 }
 
 function testimonialScroll() {
@@ -29,26 +28,4 @@ function testimonialScroll() {
   next.onclick = () => {
     cards.scrollLeft += scrollAmount;
   };
-}
-
-function aosIntersection() {
-  const aniNodes = document.querySelectorAll(".has-ani");
-
-  const Observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("ani");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    {
-      threshold: 0.3,
-    }
-  );
-
-  aniNodes.forEach((node) => {
-    Observer.observe(node);
-  });
 }

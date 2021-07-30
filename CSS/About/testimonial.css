@@ -25,12 +25,10 @@
 }
 
 .test-cards {
-  width: 100%;
   display: grid;
   grid-template-columns: repeat(6, 310px);
-  overflow: scroll;
+  overflow: hidden;
   scroll-behavior: smooth;
-  padding-left: 20px;
 }
 
 .test-cards::-webkit-scrollbar {
@@ -101,12 +99,9 @@
   }
 
   .test-cards {
-    width: 100%;
     display: grid;
     grid-template-columns: repeat(5, 450px);
-    overflow: scroll;
     scroll-behavior: smooth;
-    padding-left: 20px;
   }
 
   .test-card p {
